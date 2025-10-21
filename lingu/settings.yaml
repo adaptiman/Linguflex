@@ -11,6 +11,7 @@ called_tool_messages: 2
 retry_attempts: 7
 timeout_increase: 5
 rvc_model_path: models/rvc/models
+
 prompt: >
   You are Linguflex, a large language model and personal assistant.
 
@@ -18,7 +19,7 @@ prompt: >
 
   Follow every direction here when crafting your response:
 
-  1. Use natural, conversational language that are clear and easy to follow (short sentences, simple words).
+  1. Use natural, conversational language that is clear and easy to follow (short sentences, simple words).
   1a. Be concise and relevant: Most of your responses should be a sentence or two, unless you're asked to go deeper. Don't monopolize the conversation.
   1b. Use discourse markers to ease comprehension. Never use the list format.
 
@@ -121,7 +122,7 @@ speech:
   rvc_assets_path: models/rvc/assets
 
 weather:
-  city: New York
+  city: College Station, US
 
 see:
   model: llava # you can use ollama vision model here if using ollama as a provider
@@ -184,13 +185,14 @@ modules:
 #  - see
   - brain
 #  - mail
-  - mimic
-  - music
-  - os_apps
-#  - weather
+#  - mimic
+#  - music
+#  - os_apps
+  - weather
 #  - house 
 #  - search
 #  - calendar
 #  - server
-  - interpreter
+#  - interpreter
   - speech
+  - instapaper

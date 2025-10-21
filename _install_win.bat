@@ -1,5 +1,5 @@
 @echo off
-set PYTHON_EXE=python.exe
+set PYTHON_EXE=C:\Users\DavidSweeney\miniconda3\envs\lgfl\python.exe
 
 cd /d %~dp0
 

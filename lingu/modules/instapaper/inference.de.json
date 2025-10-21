@@ -1,0 +1,74 @@
+{
+    "ReadCurrentBookmarkTitle": {
+        "keywords": ["*titel lesen*", "*aktueller titel*", "*lesezeichen titel*", "*was*titel*"],
+        "init_prompt": "Lese den aktuellen Lesezeichen-Titel...",
+        "success_prompt": "Hier ist der aktuelle Lesezeichen-Titel.",
+        "fail_prompt": "Ich konnte den Lesezeichen-Titel nicht lesen. Bitte überprüfen Sie Ihre Instapaper-Verbindung."
+    },
+    "ReadCurrentBookmarkContent": {
+        "keywords": ["*artikel lesen*", "*inhalt lesen*", "*lesezeichen lesen*", "*aktuell lesen*", "*artikel inhalt*"],
+        "init_prompt": "Lese den aktuellen Artikel-Inhalt...",
+        "success_prompt": "Hier ist der Artikel-Inhalt.",
+        "fail_prompt": "Ich konnte den Artikel-Inhalt nicht lesen. Bitte überprüfen Sie Ihre Verbindung."
+    },
+    "NavigateToNextBookmark": {
+        "keywords": ["*nächstes lesezeichen*", "*nächster artikel*", "*weiter*", "*vorwärts*"],
+        "init_prompt": "Gehe zum nächsten Lesezeichen...",
+        "success_prompt": "Zum nächsten Lesezeichen gewechselt.",
+        "fail_prompt": "Konnte nicht zum nächsten Lesezeichen wechseln. Sie sind möglicherweise beim letzten Lesezeichen."
+    },
+    "NavigateToPreviousBookmark": {
+        "keywords": ["*vorheriges lesezeichen*", "*zurück*", "*rückwärts*", "*letztes lesezeichen*"],
+        "init_prompt": "Gehe zum vorherigen Lesezeichen...",
+        "success_prompt": "Zum vorherigen Lesezeichen gewechselt.",
+        "fail_prompt": "Konnte nicht zum vorherigen Lesezeichen wechseln. Sie sind möglicherweise beim ersten Lesezeichen."
+    },
+    "NavigateToFirstBookmark": {
+        "keywords": ["*erstes lesezeichen*", "*anfang*", "*start*", "*beginn*"],
+        "init_prompt": "Gehe zum ersten Lesezeichen...",
+        "success_prompt": "Zum ersten Lesezeichen gewechselt.",
+        "fail_prompt": "Konnte nicht zum ersten Lesezeichen navigieren."
+    },
+    "NavigateToLastBookmark": {
+        "keywords": ["*letztes lesezeichen*", "*ende*", "*schluss*"],
+        "init_prompt": "Gehe zum letzten Lesezeichen...",
+        "success_prompt": "Zum letzten Lesezeichen gewechselt.",
+        "fail_prompt": "Konnte nicht zum letzten Lesezeichen navigieren."
+    },
+    "ListAllBookmarks": {
+        "keywords": ["*lesezeichen auflisten*", "*zeige lesezeichen*", "*alle lesezeichen*", "*lesezeichen liste*"],
+        "init_prompt": "Lade alle Lesezeichen...",
+        "success_prompt": "Hier sind alle Ihre Lesezeichen.",
+        "fail_prompt": "Konnte die Lesezeichen-Liste nicht laden."
+    },
+    "DeleteCurrentBookmark": {
+        "keywords": ["*lesezeichen löschen*", "*entfernen*", "*aktuell löschen*", "*dies löschen*"],
+        "init_prompt": "Lösche das aktuelle Lesezeichen...",
+        "success_prompt": "Lesezeichen erfolgreich gelöscht.",
+        "fail_prompt": "Konnte das Lesezeichen nicht löschen. Bitte versuchen Sie es erneut."
+    },
+    "StarCurrentBookmark": {
+        "keywords": ["*lesezeichen bewerten*", "*favorit*", "*stern*", "*markieren*"],
+        "init_prompt": "Bewerte das aktuelle Lesezeichen...",
+        "success_prompt": "Lesezeichen erfolgreich bewertet.",
+        "fail_prompt": "Konnte das Lesezeichen nicht bewerten. Bitte versuchen Sie es erneut."
+    },
+    "ArchiveCurrentBookmark": {
+        "keywords": ["*archivieren*", "*aktuell archivieren*", "*dies archivieren*"],
+        "init_prompt": "Archiviere das aktuelle Lesezeichen...",
+        "success_prompt": "Lesezeichen erfolgreich archiviert.",
+        "fail_prompt": "Konnte das Lesezeichen nicht archivieren. Bitte versuchen Sie es erneut."
+    },
+    "AddNewBookmark": {
+        "keywords": ["*lesezeichen hinzufügen*", "*neues lesezeichen*", "*speichern*", "*lesezeichen*url*"],
+        "init_prompt": "Füge ein neues Lesezeichen hinzu...",
+        "success_prompt": "Lesezeichen erfolgreich hinzugefügt.",
+        "fail_prompt": "Konnte das Lesezeichen nicht hinzufügen. Bitte überprüfen Sie die URL."
+    },
+    "CreateHighlight": {
+        "keywords": ["*markierung*", "*hervorheben*", "*text markieren*", "*highlight*"],
+        "init_prompt": "Erstelle eine Markierung...",
+        "success_prompt": "Markierung erfolgreich erstellt.",
+        "fail_prompt": "Konnte die Markierung nicht erstellen. Bitte versuchen Sie es erneut."
+    }
+}

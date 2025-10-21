@@ -1,0 +1,74 @@
+{
+    "ReadCurrentBookmarkTitle": {
+        "keywords": ["*read title*", "*current title*", "*bookmark title*", "*what*title*"],
+        "init_prompt": "Reading the current bookmark title...",
+        "success_prompt": "Here's the current bookmark title.",
+        "fail_prompt": "I couldn't read the bookmark title. Please check your Instapaper connection."
+    },
+    "ReadCurrentBookmarkContent": {
+        "keywords": ["*read article*", "*read content*", "*read bookmark*", "*read current*", "*article content*"],
+        "init_prompt": "Reading the current article content...",
+        "success_prompt": "Here's the article content.",
+        "fail_prompt": "I couldn't read the article content. Please check your connection."
+    },
+    "NavigateToNextBookmark": {
+        "keywords": ["*next bookmark*", "*next article*", "*go next*", "*move next*"],
+        "init_prompt": "Moving to the next bookmark...",
+        "success_prompt": "Moved to the next bookmark.",
+        "fail_prompt": "Couldn't move to the next bookmark. You might be at the last bookmark."
+    },
+    "NavigateToPreviousBookmark": {
+        "keywords": ["*previous bookmark*", "*prev bookmark*", "*go back*", "*move back*", "*last bookmark*"],
+        "init_prompt": "Moving to the previous bookmark...",
+        "success_prompt": "Moved to the previous bookmark.",
+        "fail_prompt": "Couldn't move to the previous bookmark. You might be at the first bookmark."
+    },
+    "NavigateToFirstBookmark": {
+        "keywords": ["*first bookmark*", "*go first*", "*start*", "*beginning*"],
+        "init_prompt": "Moving to the first bookmark...",
+        "success_prompt": "Moved to the first bookmark.",
+        "fail_prompt": "Couldn't navigate to the first bookmark."
+    },
+    "NavigateToLastBookmark": {
+        "keywords": ["*last bookmark*", "*go last*", "*end*", "*final*"],
+        "init_prompt": "Moving to the last bookmark...",
+        "success_prompt": "Moved to the last bookmark.",
+        "fail_prompt": "Couldn't navigate to the last bookmark."
+    },
+    "ListAllBookmarks": {
+        "keywords": ["*list bookmarks*", "*show bookmarks*", "*all bookmarks*", "*bookmark list*"],
+        "init_prompt": "Retrieving all bookmarks...",
+        "success_prompt": "Here are all your bookmarks.",
+        "fail_prompt": "Couldn't retrieve the bookmark list."
+    },
+    "DeleteCurrentBookmark": {
+        "keywords": ["*delete bookmark*", "*remove bookmark*", "*delete current*", "*delete this*"],
+        "init_prompt": "Deleting the current bookmark...",
+        "success_prompt": "Bookmark deleted successfully.",
+        "fail_prompt": "Couldn't delete the bookmark. Please try again."
+    },
+    "StarCurrentBookmark": {
+        "keywords": ["*star bookmark*", "*favorite bookmark*", "*star current*", "*favorite this*"],
+        "init_prompt": "Starring the current bookmark...",
+        "success_prompt": "Bookmark starred successfully.",
+        "fail_prompt": "Couldn't star the bookmark. Please try again."
+    },
+    "ArchiveCurrentBookmark": {
+        "keywords": ["*archive bookmark*", "*archive current*", "*archive this*"],
+        "init_prompt": "Archiving the current bookmark...",
+        "success_prompt": "Bookmark archived successfully.",
+        "fail_prompt": "Couldn't archive the bookmark. Please try again."
+    },
+    "AddNewBookmark": {
+        "keywords": ["*add bookmark*", "*new bookmark*", "*save bookmark*", "*bookmark*url*"],
+        "init_prompt": "Adding a new bookmark...",
+        "success_prompt": "Bookmark added successfully.",
+        "fail_prompt": "Couldn't add the bookmark. Please check the URL."
+    },
+    "CreateHighlight": {
+        "keywords": ["*highlight*", "*create highlight*", "*highlight text*", "*mark text*"],
+        "init_prompt": "Creating a highlight...",
+        "success_prompt": "Highlight created successfully.",
+        "fail_prompt": "Couldn't create the highlight. Please try again."
+    }
+}

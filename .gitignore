@@ -178,5 +178,5 @@ _install_win.bat
 lingu/settings.yaml
 .vscode/settings.json
 .gitignore
-
 Linguflex.code-workspace
+lingu/settings.yaml

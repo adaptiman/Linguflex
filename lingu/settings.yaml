@@ -173,6 +173,11 @@ home_assistant:
       - hs_color
     switch: []
 
+instapaper:
+  max_articles: 25
+  article_summary_length: 100
+  article_content_length: 1000
+
 # Logging settings
 logging:
   level: INFO

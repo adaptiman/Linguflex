@@ -5,7 +5,6 @@ Business logic for interacting with Instapaper bookmarks.
 Independent of Linguflex for standalone testing.
 """
 
-import netrc
 from typing import List, Dict, Optional, Tuple
 
 # Try to import required dependencies
@@ -23,10 +22,17 @@ try:
 except ImportError:
     LINGU_AVAILABLE = False
     # Fallback configuration function
-    def cfg(module: str, key: str, default=None):
-        # When running standalone, just return the default value
+    def cfg(module: str, key: str, default=None, env_key=None):
+        # When running standalone, try environment variable first, then return default
+        import os
+        if env_key and env_key in os.environ:
+            return os.environ[env_key]
         return default
 
+instapaper_username = cfg("instapaper", "username", env_key="INSTAPAPER_USERNAME")
+instapaper_password = cfg("instapaper", "password", env_key="INSTAPAPER_PASSWORD")
+instapaper_api_key = cfg("instapaper", "API_KEY", env_key="INSTAPAPER_API_KEY")
+instapaper_api_secret = cfg("instapaper", "API_SECRET", env_key="INSTAPAPER_API_SECRET")
 
 class InstapaperHandler:
     """Handler for Instapaper operations"""
@@ -38,18 +44,30 @@ class InstapaperHandler:
         
     def connect(self) -> Dict[str, str]:
         """
-        Connect to Instapaper using credentials from .netrc
+        Connect to Instapaper using credentials from environment variables or config
         
         Returns:
             Dict containing connection status and message
         """
         try:
-            secrets = netrc.netrc()
-            login, _, password = secrets.authenticators('instapaper.com')
-            consumerkey, _, consumersecret = secrets.authenticators('api.instapaper.com')
+            # Check if all required credentials are available
+            if not all([instapaper_username, instapaper_password, instapaper_api_key, instapaper_api_secret]):
+                missing = []
+                if not instapaper_username: missing.append("INSTAPAPER_USERNAME")
+                if not instapaper_password: missing.append("INSTAPAPER_PASSWORD")
+                if not instapaper_api_key: missing.append("INSTAPAPER_API_KEY")
+                if not instapaper_api_secret: missing.append("INSTAPAPER_API_SECRET")
+                
+                return {
+                    "status": "error",
+                    "message": f"Missing required environment variables: {', '.join(missing)}"
+                }
             
-            self.instapaper_client = instapaper.Instapaper(consumerkey, consumersecret)
-            self.instapaper_client.login(login, password)
+            # Initialize Instapaper client with API credentials
+            self.instapaper_client = instapaper.Instapaper(instapaper_api_key, instapaper_api_secret)
+            
+            # Login with username/password
+            self.instapaper_client.login(instapaper_username, instapaper_password)
             
             return {
                 "status": "success",

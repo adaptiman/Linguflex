@@ -6,9 +6,36 @@ Instapaper Module
 
 """
 
-from lingu import Populatable
+from lingu import cfg, Populatable
 from pydantic import Field
+from typing import Dict, Any
 from .logic import logic
+from .state import state
+
+
+class GetInstapaperConnectionStatus(Populatable):
+    """
+    Returns the current connection status and information about Instapaper integration.
+    """
+
+    def on_populated(self):
+        return {
+            "connected": state.is_connected,
+            "connection_message": state.connection_message,
+            "total_bookmarks": state.total_bookmarks,
+            "current_index": state.current_index + 1,  # 1-based for display
+            "current_title": state.current_bookmark_title,
+            "is_disabled": state.is_disabled
+        }
+
+
+class GetCurrentBookmarkInfo(Populatable):
+    """
+    Returns detailed information about the currently selected bookmark.
+    """
+
+    def on_populated(self):
+        return state.get_current_bookmark_info()
 
 
 class ReadCurrentBookmarkTitle(Populatable):
